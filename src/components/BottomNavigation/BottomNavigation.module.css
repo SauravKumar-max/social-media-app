@@ -1,0 +1,58 @@
+.bottomNavigationBar{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    background: var(--theme-page-background);
+    padding: 1rem 0.3rem;
+    width: 100%;
+    border-top: solid 0.2px var(--border-color);
+}
+
+.bottomNavigationBar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 1rem;
+}
+  
+.bottomNavigationBar a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--theme-page-text);
+}
+
+.logoutItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logoutItem button{
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--theme-page-text);
+}
+
+.bottomNavigationBar .linkIcon{
+    font-size: 1.1rem;
+}
+
+.bottomNavigationBar .linkName{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+    .bottomNavigationBar{
+        display: block;
+    }
+    
+}
