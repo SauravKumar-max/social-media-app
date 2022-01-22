@@ -1,0 +1,143 @@
+.addPostModal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    width: 100%;
+    height: 100vh;
+    background: rgba(134, 133, 133, 0.425);
+}
+
+.addPostContainer {
+    position: fixed;
+    top: 8%;
+    z-index: 7;
+    background: var(--theme-page-background);
+    padding: 1rem;
+    width: 92%;
+    max-width: 32rem;
+    border-radius: 1rem;
+    animation: popup 0.1s ease-in-out;
+}
+
+@keyframes popup {
+    from{
+        transform: scale(0.9);
+    }
+
+    to{
+        transform: scale(1);
+    }
+}
+
+.removeModal button{
+    background: none;
+    border: none;
+    color: var(--theme-page-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.postField{
+    display: flex;
+}
+
+.userImage{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.selectedImage{
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.selectedImage button{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: grey;
+    width: 20px;
+    height: 20px;
+    border: none;
+    color: var(--theme-page-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.selectedImage img{
+    width: 100%;
+}
+
+.addPostActions{
+    width: 100%;
+    margin: 0.5rem 1rem;
+}
+
+.addPostInput{
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    outline: none;
+    resize: vertical;
+    caret-color: var(--theme-page-text);
+    resize: none;
+    color: var(--theme-page-text);
+    font-family: "Segoe UI","Roboto","Oxygen",sans-serif;
+    width: 100%;
+}
+
+[placeholder]:empty::before {
+    content: attr(placeholder);
+    color: var(--light-text-color)
+}
+
+.addImage{
+    position: relative;
+}
+
+.addImageBtn{
+    position: absolute;
+}
+
+.addImageInput{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+}
+
+.addPostBtns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.addImageBtn{
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.postBtn{
+    border: none;
+    outline: none;
+    color: #fff;
+    background: var(--primary-color);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+}
