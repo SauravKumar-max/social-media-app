@@ -1,0 +1,57 @@
+.deleteBtnContainer{
+    position: relative;
+}
+
+.deleteBtnContainer .threeDota{
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.1rem;
+    color: var(--light-text-color);
+    cursor: pointer;
+}
+
+.deleteModal .backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 0;
+}
+
+.deleteModal .deleteBtn{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    background: var(--theme-page-background);
+    border: none;
+    border-radius: 0.2rem;
+    box-shadow: var(--light-text-color) 0px 0px 15px, var(--light-text-color) 0px 0px 3px 1px;;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: popup 0.1s ease-in-out;
+}
+.deleteModal .deleteBtn span{
+    font-size: 1.3rem;
+    margin: 2px 3px 0 0;
+    color: red;
+}
+
+@keyframes popup {
+    from{
+        transform: scale(0.9);
+    }
+
+    to{
+        transform: scale(1);
+    }
+}
