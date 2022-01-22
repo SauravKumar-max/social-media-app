@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getTokenFromLocalStroage, removeTokenFromLocalStorage } from "../../utils";
+import { AuthState } from "../features.types";
 import { login } from "./authService";
 
 export const loginUserWithCredentials = createAsyncThunk(
@@ -10,14 +11,7 @@ export const loginUserWithCredentials = createAsyncThunk(
     }
 )
 
-type AuthState = {
-    token: string | null,
-    isAuthenticated: boolean,
-    status: 'idle' | 'loading' | 'failed',
-    errorMessage: string | null
-}
-
-const initialState:AuthState = {
+const initialState: AuthState = {
     token: getTokenFromLocalStroage().token || null,
     isAuthenticated: getTokenFromLocalStroage().isUserLoggedIn || false,
     status: "idle",
