@@ -1,0 +1,11 @@
+.likeBtn button{ 
+    border: none;
+    background: none;
+    font-size: 1em;
+    color: var(--light-text-color);
+    cursor: pointer;
+}
+
+.likeBtn .liked{
+    color: #ea1b51;
+}
