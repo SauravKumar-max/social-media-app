@@ -1,0 +1,17 @@
+.suggestionContainer{
+    border: solid 1px var(--border-color);
+    height: fit-content;
+    margin: 2rem;
+    border-radius: 1rem;
+}
+
+.suggestionContainer h3{
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 1.3rem 0;
+}
+
+.suggestionProfiles{
+    border-bottom: none;
+    border-radius: 0.5rem;
+}
