@@ -1,0 +1,143 @@
+.postContainer{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    border-bottom: solid 0.2px var(--border-color);
+}
+
+.postContainer .userImage img{
+    object-fit: cover;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #c4ccdf;
+}
+
+.postInfo{
+    width: 100%;
+    margin: 0 1rem;
+}
+
+.postUser{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.postUser div{
+    display: flex;
+    flex-direction: row;
+}
+
+.postUser span{
+    font-size: 1;
+    color: var(--light-text-color);
+}
+
+.postUser .name{
+    font-weight: bold;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+}
+
+.postUser .name:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.postUser .username{
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+}
+
+.userPost{
+    margin-top: 0.4rem;
+    cursor: pointer;
+}
+
+.userPost .postText{
+    font-size: 1rem;
+    line-height: 22px;
+    font-weight: 100;
+}
+
+.userPost .postImage{
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+
+.postImage img{
+    width: 100%;
+    border-radius: 1rem;
+    border: solid 0.5px var(--border-color);
+    object-fit: cover;
+}
+
+.postActions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 1.5rem 0 0.5rem;
+}
+
+.postActions button{
+    border: none;
+    background: none;
+    font-size: 1em;
+    color: var(--light-text-color);
+    cursor: pointer;
+}
+
+.postActions button:first-child{
+    display: flex;
+    align-items: center;
+}
+
+.postActions button span{
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.postActions .liked{
+    color: #ea1b51;
+}
+
+.postActions .copied{
+    position: relative;
+}
+
+.postActions .copied::after{
+    content: "Copied!";
+    background: #000;
+    color: #fff;
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.9rem;
+    position: absolute;
+    top: -2rem;
+    right: -1.5rem;
+    animation: smoothpop 0.1s ease-in-out;
+}
+
+.postActions .copied::before{
+    content: "";
+    width: 0.8rem;
+    height: 0.8rem;
+    background: #000;
+    position: absolute;
+    top: -1.2rem;
+    right: 0;
+    transform: rotate(50deg);
+}
+
+@keyframes smoothpop {
+    from{
+        transform: translateY(0.1rem);
+        opacity: 0.5;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
