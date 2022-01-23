@@ -1,0 +1,89 @@
+.headerImage{
+    width: 100%;
+    height: 12.5rem;
+    background: #c4ccdf;
+}
+
+.headerImage img{
+    object-fit: cover;
+    width: 100%;
+    height: 12.5rem;
+}
+
+.user{
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.userAction{
+    margin-top: 4rem;
+}
+
+.editProfile{
+    border: solid 1.5px var(--light-text-color);
+    background: none;
+    font-size: 1rem;
+    color: var(--theme-page-text);
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+}
+
+.userImage img{
+    object-fit: cover;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    border: solid 5px var(--theme-page-background);   
+    background: #fff; 
+}
+
+.profileInfo{
+    margin-top: -5.5rem;
+    padding: 1rem 1.5rem;
+    border-bottom: solid 0.2px var(--border-color);
+}
+
+.profileName{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--theme-page-text);
+}
+
+.profileUsername{
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+    margin-top: 0.2rem;
+}
+
+.userBio{
+    font-size: 0.9rem;
+    padding: 1rem 1rem 1rem 0;
+    color: var(--theme-page-text);
+}
+
+.connections{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.connections span{
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--theme-page-text);
+}
+
+.connections a{
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+    margin-right: 1.5rem;
+    text-decoration: none;
+}
+
+.connections a:hover{
+    text-decoration: underline;
+}
