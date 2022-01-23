@@ -1,0 +1,33 @@
+.following{
+    border: solid 1.5px var(--light-text-color);
+    background: none;
+    font-size: 1rem;
+    color: var(--theme-page-text);
+    font-weight: bold;
+    padding: 0.5rem;
+    width: 8rem;
+    border-radius: 1rem;
+}
+
+.unfollowText{
+    display: none;
+    color: red;
+}
+
+.following:hover .followingText{
+    display: none;
+}
+
+.following:hover .unfollowText{
+    display: inline;
+}
+
+.follow{
+    border: none;
+    font-size: 1rem;
+    background: var(--theme-page-text);
+    color: var(--theme-page-background);
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+}
