@@ -1,0 +1,126 @@
+.sidebar{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin-left: 3rem;
+    padding-right: 1rem;
+    border-right: solid 0.2px var(--border-color);
+}
+
+.logo{
+    font-size: 2rem;
+    color: var(--theme-color);
+    margin: 1rem 0 1rem 0;
+}
+
+.navLists{
+    list-style: none;
+}
+
+
+.linkItem a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    color: var(--theme-page-text);
+    font-weight: bold;
+    border-radius: 2rem;
+    padding: 0.7rem 0;
+}
+
+.linkIcon{
+    font-size: 1.5rem;
+    margin: 0 1rem 0 0;
+}
+
+.tweetBtn button{
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 96%;
+    padding: 0.8rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.tweetBtnMobile{
+    display: none;
+    margin-top: 1rem;
+}
+
+.tweetBtnMobile button, .logoutBtnMobile button{
+    background: var(--primary-color);
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-left: -0.8rem;
+    cursor: pointer;
+}
+
+.logoutBtnMobile{
+    display: none;
+    margin-bottom: 2rem;
+}
+
+.logoutBtn button{
+    border: none;
+    border: solid 2px var(--primary-color);
+    background: none;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 96%;
+    padding: 0.7rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1070px) {
+    .sidebar{
+        margin-left: 2rem;
+    }
+    .linkName{
+        display: none;
+    }
+
+    .tweetBtn {
+        display: none;
+    }
+
+    .tweetBtnMobile{
+        display: block;
+    }
+
+    .logoutBtn{
+        display: none;
+    }
+
+    .logoutBtnMobile{
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .sidebar{
+        display: none;
+    }
+    
+}
