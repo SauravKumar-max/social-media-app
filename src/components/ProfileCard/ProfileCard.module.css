@@ -1,0 +1,40 @@
+.miniCard{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    /* border-bottom: solid 1.5px var(--border-color); */
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.profile img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profileInfo{
+    padding: 0 1rem;
+    text-decoration: none;
+}
+
+.profileInfo p:first-child{
+    font-size: 1rem;
+    color: var(--theme-page-text);
+    font-weight: bold;
+}
+
+.profileInfo p:last-child{
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+    margin-top: 2px;
+}
+
+.profileInfo p:hover{
+    text-decoration: underline;
+}
