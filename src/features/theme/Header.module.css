@@ -1,0 +1,42 @@
+.homeHeader{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: solid 0.2px var(--border-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: var(--theme-page-background);
+}
+.homeHeader .pageName{
+    display: flex;
+}
+
+.pageName button{
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.homeHeader button{
+    border: none;
+    background: none;
+    font-size: 1.3rem;
+    color: var(--theme-page-text);
+    cursor: pointer;
+}
+
+.homeHeader a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--theme-page-text);
+    text-decoration: none;
+}
+
+.homeHeader a span{
+    padding-left: 0.5rem;
+}
