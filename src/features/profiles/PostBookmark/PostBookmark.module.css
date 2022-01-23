@@ -1,0 +1,11 @@
+.bookmark button{
+    border: none;
+    background: none;
+    font-size: 1em;
+    color: var(--light-text-color);
+    cursor: pointer;
+}
+
+.disableBtn{
+    opacity: 0.4;
+}
