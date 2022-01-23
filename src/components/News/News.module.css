@@ -1,0 +1,36 @@
+.newsContainer{
+    border: solid 1px var(--border-color);
+    height: fit-content;
+    margin: 2rem;
+    border-radius: 1rem;
+}
+
+.newsContainer h3{
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 1.3rem 0;
+}
+
+.news{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--theme-page-text);
+}
+
+.news:hover{
+    background: var(--theme-secondary-background);
+}
+
+.news p{
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+}
+
+.news img{
+    width: 6rem;
+    border-radius: 0.5rem;
+}
