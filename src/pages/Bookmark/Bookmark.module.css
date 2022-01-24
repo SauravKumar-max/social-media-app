@@ -1,0 +1,26 @@
+.bookmarks{
+    padding-bottom: 2rem;
+    border-right: solid 0.2px var(--border-color);
+}
+
+.noResult{
+    color: var(--light-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin-top: 5rem;
+}
+
+.noResult span{
+    font-size: 4rem;
+    padding: 0 0.6rem;
+}
+
+.noResult p{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 3px;
+    text-align: center;
+}
