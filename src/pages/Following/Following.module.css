@@ -1,0 +1,43 @@
+.followingPage{
+    border-right: solid 0.2px var(--border-color);
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1rem;
+    border-bottom: solid 0.2px var(--border-color);
+}
+
+.profileItem{
+    border-bottom: solid 1.5px var(--border-color);
+}
+
+.links a{
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem;
+
+}
+
+.links a:hover{
+    text-decoration: underline;
+}
+
+.links .activeLink{
+    color: var(--theme-page-text);
+    border-bottom: solid 2px var( --primary-color );
+}
+
+.links .inActiveLink{
+    color: var(--light-text-color);
+}
+
+.emptyList{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--light-text-color);
+}
