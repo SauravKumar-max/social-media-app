@@ -58,7 +58,6 @@
 .userPost .postText{
     font-size: 1rem;
     line-height: 22px;
-    font-weight: bold;
     color: var(--theme-page-text);
 }
 
