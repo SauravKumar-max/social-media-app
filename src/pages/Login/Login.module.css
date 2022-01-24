@@ -1,0 +1,101 @@
+.homeLinkContainer{
+    padding-top: 2rem;
+}
+
+.homeLink{
+    padding: 0 2rem;
+    color: var(--theme-color);
+    text-decoration: none;
+    font-size: 2.2rem;
+}
+
+.loginContainer{
+    width: 100%;
+    margin: auto;
+    height: 100vh;
+}
+
+.loginField{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin:  3rem auto;
+    width: 90%;
+    max-width: 30rem;
+    border: solid 1.5px var(--border-color);
+    border-radius: 0.5rem;
+    box-shadow: chartreuse;
+}
+
+.loginField h2{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.loginField input{
+    font-size: 1rem;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    width: 100%;
+    border-radius: 0.5rem;
+    outline: none;
+    border: solid 1px var(--border-color);
+    background: none;
+    color: var(--theme-page-text);
+}
+
+.loginField input:focus{
+    border: solid 1px var(--primary-color);
+}
+
+.loginField .loginBtn{
+    font-size: 1rem;
+    padding: 0.9rem 0;
+    margin: 0.5rem 0;
+    background: var(--primary-color);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 0.5rem;
+}
+
+.loginField .disableBtn{
+    font-size: 1rem;
+    padding: 0.9rem 0;
+    margin: 0.5rem 0;
+    background: var(--primary-color);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    opacity: 0.5;
+}
+
+.errorMessage{
+    font-size: 0.8rem;
+    color: red;
+}
+
+.loginField small{
+    font-size: 0.8rem;
+    color: var( --light-text-color);
+    text-align: center;
+}
+
+.loginField small a{
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.guestCredentials{
+    font-size: 0.8rem;
+    border: none;
+    outline: none;
+    background: none;
+    text-decoration: underline;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding-top: 0.5rem;
+    cursor: pointer;
+}
