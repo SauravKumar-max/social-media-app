@@ -1,0 +1,11 @@
+.postPage{
+    border-right: solid 0.2px var(--border-color);
+}
+
+.emptyPost{
+    color: var(--light-text-color);
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
