@@ -59,6 +59,7 @@
     font-size: 1rem;
     line-height: 22px;
     font-weight: 100;
+    color: var(--theme-page-text);
 }
 
 .userPost .postImage{
