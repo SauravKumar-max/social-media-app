@@ -1,0 +1,80 @@
+.home{
+    border-right: solid 0.2px var(--border-color);
+}
+
+.homeHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: solid 0.2px var(--border-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.homeHeader button{
+    border: none;
+    background: none;
+    font-size: 1.3rem;
+    color: var(--theme-page-text);
+}
+
+.tweetField{
+    display: flex;
+    margin-top: 1rem;
+    border-bottom: solid 0.2px var(--border-color);
+}
+
+.userAvatar{
+    outline: none;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+    background: #fff;
+}
+
+.userAvatar img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #fff;
+}
+
+.tweetActions{
+    width: 100%;
+    margin: 1rem;
+}
+
+.tweetActions span{
+    font-size: 1.3rem;
+    color: var(--light-text-color);
+}
+
+.tweetActions div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.tweetActions button:first-child{
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.tweetActions button:last-child{
+    border: none;
+    outline: none;
+    color: #fff;
+    background: var(--primary-color);
+    opacity: 0.5;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+}
