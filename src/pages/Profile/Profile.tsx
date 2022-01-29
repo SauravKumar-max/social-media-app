@@ -23,15 +23,20 @@ export function Profile() {
       {status === "succeeded" && (
         <>
           <Header page={name} />
-          <ProfileHeader
-            _id={_id}
-            bio={bio}
-            followers={followers}
-            following={following}
-            name={name}
-            picture={picture}
-            username={username}
-          />
+          {profile ? (
+            <ProfileHeader
+              _id={_id}
+              bio={bio}
+              followers={followers}
+              following={following}
+              name={name}
+              picture={picture}
+              username={username}
+            />
+          ) : (
+            <NoResultMessage message="Profile Not Found" />
+          )}
+
           {posts?.length === 0 ? (
             <NoResultMessage message="No Post to Show" />
           ) : (
