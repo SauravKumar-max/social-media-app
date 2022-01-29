@@ -60,10 +60,10 @@ const userSlice = createSlice({
             state.errorMessage = null;
         })
           .addCase(getCurrentUser.fulfilled, (state, action) => {
-            const { _id, picture } = action.payload?.currentUser;
+            const { _id, picture } = action.payload?.currentUser || {};
             state.status = 'succeeded';
             state.currentUserId = _id;
-            state.currentUserImage = picture.profile;
+            state.currentUserImage = picture?.profile;
             state.errorMessage = null;
         })
           .addCase(getCurrentUser.rejected, (state, action) => {
