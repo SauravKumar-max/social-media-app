@@ -127,8 +127,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
-      <AddPostFloatBtn />
-      <BottomNavigation />
+      {token && <AddPostFloatBtn />}
+      {token && <BottomNavigation />}
     </div>
   );
 }
