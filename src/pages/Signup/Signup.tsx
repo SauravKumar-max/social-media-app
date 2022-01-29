@@ -132,9 +132,18 @@ export function Signup(): JSX.Element {
         {errorMessage.inputError && (
           <p className={styles.errorMessage}>{errorMessage.inputError}</p>
         )}
-        <button onClick={() => mutateSignup()}>
-          {loading || status === "loading" ? "Signing..." : "SignUp"}
-        </button>
+        {email &&
+        name &&
+        username &&
+        password &&
+        confirmPassword &&
+        password === confirmPassword ? (
+          <button onClick={() => mutateSignup()}>
+            {loading || status === "loading" ? "Signing..." : "SignUp"}
+          </button>
+        ) : (
+          <button style={{ opacity: "0.6" }}>SignUp</button>
+        )}
         <small>
           Already have an account <Link to="/login"> login </Link>
         </small>
