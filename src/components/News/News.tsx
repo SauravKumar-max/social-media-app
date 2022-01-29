@@ -10,34 +10,47 @@ export function News(): JSX.Element {
   useEffect(() => {
     setLoader(true);
     fetch(
-      "https://newsapi.org/v2/everything?q=tech&from=2022-01-20&sortBy=popularity&apiKey=fcd1ec4a5f1a4f549c6a258874d1d23b"
+      "https://google-news.p.rapidapi.com/v1/top_headlines?lang=en&country=US",
+      {
+        method: "GET",
+        headers: {
+          "x-rapidapi-host": "google-news.p.rapidapi.com",
+          "x-rapidapi-key":
+            "2a9a1344d9mshc84ff6613e36527p1a6e38jsn6ae8a7e78cdb",
+        },
+      }
     )
       .then((response) => response.json())
       .then((data) => {
-        const limitedArtile = data.articles?.slice(0, 5);
         setLoader(false);
-        setNews(limitedArtile);
+        if ("articles" in data) {
+          const limitedData = data.articles.slice(0, 5);
+          setNews(limitedData);
+        }
       });
   }, []);
 
   return (
-    <div className={styles.newsContainer}>
-      <h3>What's happening</h3>
-      {loader && <Loader />}
-      {news?.map(({ source, title, url, urlToImage }, index) => {
-        return (
-          <a
-            href={url}
-            key={`${source.id}-${index}`}
-            className={styles.news}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <p>{title}</p>
-            <img src={urlToImage} alt="" />
-          </a>
-        );
-      })}
-    </div>
+    <>
+      {news && (
+        <div className={styles.newsContainer}>
+          <h3>What's happening</h3>
+          {loader && <Loader />}
+          {news?.map(({ title, link }, index) => {
+            return (
+              <a
+                href={link}
+                key={index}
+                className={styles.news}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <p>{title}</p>
+              </a>
+            );
+          })}
+        </div>
+      )}
+    </>
   );
 }
