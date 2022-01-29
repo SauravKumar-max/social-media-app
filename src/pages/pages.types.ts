@@ -57,10 +57,6 @@ export type ProfileCardProps = {
 
 export type NewsType = {
     title: string;
-    urlToImage: string;
-    url: string;
-    source: {
-        id: string
-    }
-
+    link: string;
+    id: string
 }
