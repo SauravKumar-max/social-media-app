@@ -10,7 +10,7 @@ export function Search() {
   const navigate = useNavigate();
   const inputRef = useRef<HTMLInputElement>(null);
   const [searchInput, setSearchInput] = useState("");
-  const { debounceSearch, data, loading } = useSearchUser(searchInput);
+  const { delaySearch, data, loading } = useSearchUser(searchInput);
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -27,7 +27,7 @@ export function Search() {
             ref={inputRef}
             type="text"
             placeholder="Search"
-            onKeyUp={() => debounceSearch()}
+            onKeyUp={() => delaySearch()}
             onChange={(e) => setSearchInput(e.target.value)}
           />
         </div>
