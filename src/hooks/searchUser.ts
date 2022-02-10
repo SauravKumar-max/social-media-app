@@ -18,12 +18,10 @@ export function useSearchUser(searchInput:string){
         errorPolicy: "all"
     });
 
-    const debounceSearch = () => {
-        let timer:any;
+    const delaySearch = () => {
         setTimeout(() => search(), 500);
-        return () => clearTimeout(timer)
     }
 
 
-    return { search, debounceSearch, error, data, loading };
+    return { search, delaySearch, error, data, loading };
 }
