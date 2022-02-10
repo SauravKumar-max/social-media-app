@@ -6,7 +6,7 @@ export const COMMENTS = gql`
             _id
     	    text
     	    commentUser{
-				_id		
+		_id		
                 name
                 username
                 picture{
