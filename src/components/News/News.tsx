@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
-import { Loader } from "..";
 import { NewsType } from "../../pages/pages.types";
 import styles from "./News.module.css";
 
 export function News(): JSX.Element {
   const [news, setNews] = useState<NewsType[] | null>(null);
-  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
-    setLoader(true);
     fetch(
       "https://google-news.p.rapidapi.com/v1/top_headlines?lang=en&country=US",
       {
@@ -22,7 +19,6 @@ export function News(): JSX.Element {
     )
       .then((response) => response.json())
       .then((data) => {
-        setLoader(false);
         if ("articles" in data) {
           const limitedData = data.articles.slice(0, 5);
           setNews(limitedData);
@@ -35,7 +31,6 @@ export function News(): JSX.Element {
       {news && (
         <div className={styles.newsContainer}>
           <h3>What's happening</h3>
-          {loader && <Loader />}
           {news?.map(({ title, link }, index) => {
             return (
               <a
