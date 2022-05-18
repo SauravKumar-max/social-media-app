@@ -28,3 +28,11 @@ export const MUTATECOMMENTS = gql`
 
 `;
 
+export const DELETECOMMENT = gql`
+    mutation deleteComment($postUserId: ID, $postId: ID, $commentId: ID){
+        deleteComment(postUserId: $postUserId, postId: $postId, commentId: $commentId){
+    	    _id
+        }
+    }
+`
+

@@ -2,7 +2,7 @@ import { FaRegComment, FaShareAlt } from "react-icons/fa";
 import { PostType } from "../../pages/pages.types";
 import { useNavigate } from "react-router-dom";
 import { PostLikeButton, PostBookmarkBtn } from "../../features/index";
-import { DeletePostBtn } from "..";
+import { PostDeleteBtn } from "..";
 import { useAppSelector } from "../../app/hooks";
 import { useEffect, useRef, useState } from "react";
 import styles from "./PostBox.module.css";
@@ -59,7 +59,7 @@ export function PostBox({
           </div>
           {postUserId === currentUserId && (
             <span>
-              <DeletePostBtn currentUserId={currentUserId} postId={postId} />
+              <PostDeleteBtn currentUserId={currentUserId} postId={postId} />
             </span>
           )}
         </div>

@@ -1,13 +1,14 @@
 export { BottomNavigation } from "./BottomNavigation/BottomNavigation";
 export { NoResultMessage } from "./NoResultMessage/NoResultMessage";
 export { AddPostFloatBtn } from "./AddPostFloatBtn/AddPostFloatBtn";
+export { CommentDeleteBtn } from "./DeleteBtn/CommentDeleteBtn";
 export { ProfileHeader } from "./ProfileHeader/ProfileHeader";
-export { DeletePostBtn } from "./DeletePostBtn/DeletePostBtn";
 export { ConfirmUnfollow } from "./Modals/ConfirmUnfollow";
+export { PostDeleteBtn } from "./DeleteBtn/PostDeleteBtn";
 export { ProfileCard } from "./ProfileCard/ProfileCard";
 export { ConfirmLogout } from "./Modals/ConfirmLogout";
-export { ScreenLoader } from "./Loader/ScreenLoader";
 export { Suggestion } from "./Suggestion/Suggestion";
+export { ScreenLoader } from "./Loader/ScreenLoader";
 export { MainLoader } from "./Loader/MainLoader";
 export { Comments } from "./Comments/Comments";
 export { PostBox } from "./PostBox/PostBox";

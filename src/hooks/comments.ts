@@ -1,5 +1,7 @@
 import { useMutation, useQuery } from "@apollo/client"
-import { COMMENTS, MUTATECOMMENTS } from "../graphql";
+import { COMMENTS, MUTATECOMMENTS, DELETECOMMENT } from "../graphql";
+import { apolloClient } from "../utils";
+
 
 export type CommentsData = {
     _id: string;
@@ -14,7 +16,7 @@ export type CommentsData = {
     }
 }
 
-export function useComments(postUserId: string, postId:string, text:string){
+export function useComments(postUserId: string, postId: string, text?: string){
     const { loading:commentsLoading, data:commentsData } = useQuery<{comments: CommentsData[]}>(COMMENTS, {
         variables: {
             postUserId,
@@ -35,11 +37,33 @@ export function useComments(postUserId: string, postId:string, text:string){
         ]
     });
 
+    async function mutateDeleteComment(postUserId: string, postId: string, commentId: string){
+        try {
+            const response = await apolloClient.mutate({
+                mutation: DELETECOMMENT,
+                variables: {
+                    postUserId,
+                    postId,
+                    commentId
+                },
+                refetchQueries: [
+                    COMMENTS,
+                    "comments"
+                ],
+                errorPolicy: "all",
+            })
+            return response.data
+        } catch (error) {
+            console.log({error})
+        }
+    }
+
     return { 
         commentsLoading, 
         commentsData: commentsData?.comments, 
         mutateComments, 
         mutateCommentsLoading, 
-        mutateCommentsData 
+        mutateCommentsData,
+        mutateDeleteComment
     };
 }

@@ -21,7 +21,5 @@ export function useRemovePost(postId: string, currentUserId: string){
         }
     }, [data, currentUserId, postId, dispatch])
 
-    console.log(data)
-
     return { mutateRemovePost, loading };
 }

@@ -3,6 +3,7 @@ import { Loader, NoResultMessage } from "../index";
 import { useComments } from "../../hooks";
 import styles from "./Comments.module.css";
 import { useAppSelector } from "../../app/hooks";
+import { CommentDeleteBtn } from "../DeleteBtn/CommentDeleteBtn";
 
 export function Comments({
   postUserId,
@@ -16,7 +17,9 @@ export function Comments({
   const [commentText, setComment] = useState("");
   const [dataChanged, setChange] = useState(false);
   const commentRef = useRef<HTMLInputElement>(null);
-  const { currentUserImage } = useAppSelector((state) => state.currentUser);
+  const { currentUserImage, currentUserId } = useAppSelector(
+    (state) => state.currentUser
+  );
   const { commentsLoading, commentsData, mutateComments } = useComments(
     postUserId,
     postId,
@@ -29,7 +32,6 @@ export function Comments({
     if (dataChanged) {
       setChange(false);
     }
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [commentRef, commentsData]);
 
@@ -65,16 +67,27 @@ export function Comments({
         {commentsData?.map(({ _id, commentUser, text }) => {
           return (
             <div className={styles.commentBox} key={_id}>
-              <img src={commentUser.picture.profile} alt="" />
-              <div className={styles.comment}>
-                <div className={styles.commentUser}>
-                  <p className={styles.name}>{commentUser.name}</p>
-                  <p className={styles.username}>@{commentUser.username}</p>
+              <div className={styles.userComment}>
+                <img src={commentUser.picture.profile} alt="" />
+                <div className={styles.comment}>
+                  <div className={styles.commentUser}>
+                    <p className={styles.name}>{commentUser.name}</p>
+                    <p className={styles.username}>@{commentUser.username}</p>
+                  </div>
+                  <p className={styles.reply}>
+                    Replying to <span>@{postUsername}</span>
+                  </p>
+                  <p className={styles.commentText}>{text}</p>
                 </div>
-                <p className={styles.reply}>
-                  Replying to <span>@{postUsername}</span>
-                </p>
-                <p className={styles.commentText}>{text}</p>
+              </div>
+              <div>
+                {commentUser._id === currentUserId && (
+                  <CommentDeleteBtn
+                    postUserId={postUserId}
+                    postId={postId}
+                    commentId={_id}
+                  />
+                )}
               </div>
             </div>
           );

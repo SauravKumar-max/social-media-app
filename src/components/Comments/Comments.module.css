@@ -51,8 +51,13 @@
 
 .commentBox{
     display: flex;
+    justify-content: space-between;
     padding: 1rem;
     border-bottom: solid 0.2px var(--border-color);
+}
+
+.userComment{
+    display: flex;
 }
 
 .commentList{

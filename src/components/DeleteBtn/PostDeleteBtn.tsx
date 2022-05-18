@@ -3,16 +3,16 @@ import { BsThreeDots } from "react-icons/bs";
 import { MdDelete } from "react-icons/md";
 import { useRemovePost } from "../../hooks";
 import { ScreenLoader } from "../Loader/ScreenLoader";
-import styles from "./DeletePostBtn.module.css";
+import styles from "./DeleteBtn.module.css";
 
-export type DeleteBtnProps = {
+export type PostDeleteBtnProps = {
   currentUserId: string;
   postId: string;
 };
-export function DeletePostBtn({
+export function PostDeleteBtn({
   currentUserId,
   postId,
-}: DeleteBtnProps): JSX.Element {
+}: PostDeleteBtnProps): JSX.Element {
   const [showRemove, setShowRemove] = useState(false);
   const { mutateRemovePost, loading } = useRemovePost(postId, currentUserId);
   return (
