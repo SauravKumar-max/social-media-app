@@ -3,7 +3,7 @@ import { setContext } from '@apollo/client/link/context';
 import { getTokenFromLocalStroage } from './index';
 
 const httpLink = createHttpLink({
-  uri: "https://social-media-backend-gsl4.onrender.com/graphql",
+  uri: "https://social-media-backend-2l51.onrender.com/graphql",
 });
 
 
